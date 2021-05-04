@@ -1,0 +1,15 @@
+th {
+		background-color: chocolate;
+		border: 5px solid #00008B;
+		color: Chartreuse;
+}
+
+tr	{
+		background-color: CadetBlue;
+		color: DarkMagenta;
+}
+
+td:hover{
+		background-color: CornflowerBlue;
+		color: BlueViolet;
+}
