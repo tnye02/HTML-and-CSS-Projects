@@ -2,8 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Portland's Heritage Trees</title>
+		<title>A Few of Portland's Heritage Trees</title>
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="JS/one_page_website.js" defer></script>	
+
 	</head>
 	<body>
 		<!--    -->
@@ -12,10 +14,10 @@
 		<div>
 			<div>
 				<ul>
-					<a href="#home" id="link"><li>HOME</li></a>
-					<a href="#gallery" id="link"><li>GALLERY</li></a>
-					<a href="#video" id="link"><li>VIDEO</li></a>
-					<a href="#contact" id="link"><li>CONTACT</li></a>
+					<li><a href="#home" id="link"><li>HOME</a></li>
+					<li></li><a href="#gallery" id="link"><li>GALLERY</a></li>
+					<li></li><a href="#video" id="link"><li>VIDEO</a></li>
+					<li></li><a href="#contact" id="link"><li>CONTACT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -32,66 +34,62 @@
 		<!-- END HOME -->
 		
 		<!-- GALLERY -->
-		<section>
-			<div id="gallery">
-				<h1>Gallery</h1>
-				<div>
-				
-					<!-- PHOTO-CONTAINER 1 -->
-					<div>
-						<div>
-							<img height="500px" src="./images/90_carolina_poplar.jpg" alt="">
-							
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Carolina Poplar.</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 1 -->
-					
-					<!-- PHOTO-CONTAINER 2 -->
-					<div>
-						<div>
-							<img width="500px" src="./images/241_japanese_maple.jpg" alt="">
-							
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Japanese Maple.</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 2 -->
-					
-					<!-- PHOTO-CONTAINER 3 -->
-					<div>
-						<div>
-							<img height="500" src="./images/271_pecan.jpg" alt="">
-							
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Pecan</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 3 -->
-					
-					<!-- PHOTO-CONTAINER 4 -->
-					<div>
-						<div>
-							<img width="300" src="./images/307_giant_sequoia.jpg" alt="">
-							
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Giant Sequoia</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 4 -->
-										
+			<div class="row">
+				<div class="column">
+					<img class="main_img" src="images/241_japanese_maple.JPG" onclick="openModal();currentSlide(1)">
+				</div>
+				<div class="column">
+					<img class="main_img" src="images/271_pecan.jpg" onclick="openModal(); currentSlide(2)">
+				</div>
+				<div class="column">
+					<img class="main_img" src="images/307_giant_sequoia.jpg" onclick="openModal(); currentSlide(3)">
+				</div>
+				<div class="column">
+					<img class="main_img" src="images/90_carolina_poplar.jpg" onclick="openModal(); currentSlide(4)">
 				</div>
 			</div>
-		</section>
+
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+				<div class="mySlides">
+					<div class="numbertext">1 / 4</div>
+					<img src="images/241_japanese_maple.JPG">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">2 / 4</div>
+					<img src="images/271_pecan.jpg">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">3 / 4</div>
+					<img src="images/307_giant_sequoia.jpg">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">4 / 4</div>
+					<img src="images/90_carolina_poplar.jpg">
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+			
+				<div class="column">
+					<img class="demo_cursor" src="images/241_japanese_maple_sm.JPG" onclick="currentSlide(1)" alt="Japanese Maple">
+				</div>
+				<div class="column">
+					<img class="demo_cursor" src="images/271_pecan_sm.jpg" onclick="currentSlide(2)" alt="Pecan">
+				</div>
+				<div class="column">
+					<img class="demo_cursor" src="images/307_giant_sequoia_sm.jpg" onclick="currentSlide(3)" alt="Giant Sequoia">
+				</div>
+				<div class="column">
+					<img class="demo_cursor" src="images/90_carolina_poplar_sm.jpg" onclick="currentSlide(4)" alt="Carolina Poplar">
+				</div>	
+			</div>		
+		</div>
 		<!-- END GALLERY -->
 		
 		<!-- VIDEO -->
@@ -138,6 +136,5 @@
 			<a href="https://pdx.maps.arcgis.com/apps/webappviewer/index.html?id=3f9c3e9018bb4ee890b4a66595d75027" target="_blank">Click here to access Portland Parks & Recreation Urban Forestry Site </a> &nbsp; | &nbsp; &copy; 2021
 		</div>
 		<!-- END FOOTER -->
-		
 	</body>
 </html>
